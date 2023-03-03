@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="rfc2231" uuid="36ABDE2ABE9E444B98B70EDE76F65E4C" collation_locale="ja">
+	<schema name="DEFAULT_SCHEMA"/>
+	<base_extra __stringCompHash="icu:68.1.0, alternate=search" __keywordBuildingHash="mecab:0.996;sys.dic:102;">
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>
