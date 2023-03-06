@@ -14,21 +14,17 @@ Function _append_line($filename : Collection; $str : Text)
 	
 	$filename.unshift($line)
 	
-Function _max_line_length($idx : Integer)->$max_line_length : Integer
+Function _max_line_length()->$length : Integer
 	
 	$length:=76-Length:C16("\t=?B?=")
-	
-	If ($idx=0)
-		$length:=$length-Length:C16(This:C1470.tag())
-	End if 
-	
-	$max_line_length:=$length
 	
 Function encode($str : Text)->$value : Text
 	
 	$filename:=New collection:C1472
 	
 	$_str:=$str
+	
+	var $pos; $len : Integer
 	
 	While (Length:C16($_str)#0)
 		For ($len; Length:C16($_str); 0; -1)

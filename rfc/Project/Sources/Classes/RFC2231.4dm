@@ -20,7 +20,7 @@ Function _append_line($filename : Collection; $str : Text)
 	
 	$filename.push($line)
 	
-Function _max_line_length($idx : Integer)->$max_line_length : Text
+Function _max_line_length($idx : Integer)->$length : Integer
 	
 	$length:=76-Length:C16("\tfilename*=;")-Length:C16(String:C10($idx))
 	
@@ -28,20 +28,30 @@ Function _max_line_length($idx : Integer)->$max_line_length : Text
 		$length:=$length-Length:C16(This:C1470.tag())
 	End if 
 	
-	$max_line_length:=String:C10($length)
-	
 Function encode($str : Text)->$disposition : Text
-	
-	$escaped:=This:C1470._escape($str)
 	
 	$filename:=New collection:C1472
 	
-	ARRAY LONGINT:C221($pos; 0)
-	ARRAY LONGINT:C221($len; 0)
+	$_str:=$str
 	
-	While (Match regex:C1019("([^%]|%[:hex_digit:]{2}){1,"+This:C1470._max_line_length($filename.length)+"}"; $escaped; 1; $pos; $len))
-		This:C1470._append_line($filename; Substring:C12($escaped; $pos{0}; $len{0}))
-		$escaped:=Delete string:C232($escaped; $pos{0}; $len{0})
+	While (Length:C16($str)#0)
+		
+		$escaped:=This:C1470._escape($_str)
+		
+		var $pos; $len : Integer
+		
+		While (Match regex:C1019("([^%]|%[:hex_digit:]{2})+"; $escaped; 1; $pos; $len))
+			
+			If ($len<This:C1470._max_line_length($filename.length))
+				This:C1470._append_line($filename; $escaped)
+				$str:=Delete string:C232($str; 1; Length:C16($_str))
+				$_str:=$str
+			Else 
+				$_str:=Delete string:C232($_str; Length:C16($_str); 1)  //trim end
+			End if 
+			$escaped:=This:C1470._escape($_str)
+		End while 
+		
 	End while 
 	
 	$filename.unshift("attachment")
