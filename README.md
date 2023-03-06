@@ -15,8 +15,10 @@ $disposition:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本�
 
 ```
 attachment;
-	filename*0=utf-8'ja'ascii.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA;
-	filename*1=%9E.%ED%BC%80.%ED%BC%80.%ED%BC%80.%ED%BC%80.file.name
+	filename*0=utf-8'ja'ascii.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC;
+	filename*1=%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC;
+	filename*2=%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%ED%BC%80.%ED%BC%80.;
+	filename*3=%ED%BC%80.%ED%BC%80.file.name
 ```
 
 ```4d
@@ -27,7 +29,8 @@ $filename:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本語.
 * 結果
 
 ```
-=?utf-8?B?YXNj?=
-	=?utf-8?B?aWku5pel5pys6KqeLuaXpeacrOiqni7ml6XmnKzoqp4u5pel5pys6Kqe?=
-	=?utf-8?B?LuaXpeacrOiqni7wn4yALvCfjIAu8J+MgC7wn4yALmZpbGUubmFtZQ==?=
+=?utf-8?B?YXNjaWku5pel5pys6KqeLuaXpeacrOiqni7ml6XmnKzoqp4=?=
+	=?utf-8?B?LuaXpeacrOiqni7ml6XmnKzoqp4u8J+MgC7wn4yALvCfjIAu8J+MgC5maWxlLm5hbWU=?=
 ```
+
+[検証](https://dogmamix.com/MimeHeadersDecoder/)
