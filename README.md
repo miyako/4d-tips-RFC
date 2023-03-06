@@ -20,6 +20,14 @@ attachment;
 ```
 
 ```4d
-$RFC:=cs.RFC.new()
-$disposition:=$RFC.encodeRFC2231("ascii.日本語.日本語.日本語.日本語.日本語.🌀.🌀.🌀.🌀.file.name")
+$RFC:=cs.RFC2047.new()
+$filename:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本語.🌀.🌀.🌀.🌀.file.name")
+```
+
+* 結果
+
+```
+=?utf-8?B?YXNj?=
+	=?utf-8?B?aWku5pel5pys6KqeLuaXpeacrOiqni7ml6XmnKzoqp4u5pel5pys6Kqe?=
+	=?utf-8?B?LuaXpeacrOiqni7wn4yALvCfjIAu8J+MgC7wn4yALmZpbGUubmFtZQ==?=
 ```
