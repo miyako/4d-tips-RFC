@@ -1,5 +1,5 @@
 # 4d-tips-RFC2231
-日本語のファイルをContent-Dispositionでエンコードする例題
+日本語のファイル名をMIMEヘッダーの`Content-Disposition`向けにエンコードする例題
 
 * [RFC2231](https://www.ietf.org/rfc/rfc2231.txt)
 
