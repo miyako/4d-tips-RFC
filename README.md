@@ -27,7 +27,6 @@ $filename:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本語.
 * 結果
 
 ```
-=?utf-8?B?YXNj?=
-	=?utf-8?B?aWku5pel5pys6KqeLuaXpeacrOiqni7ml6XmnKzoqp4u5pel5pys6Kqe?=
-	=?utf-8?B?LuaXpeacrOiqni7wn4yALvCfjIAu8J+MgC7wn4yALmZpbGUubmFtZQ==?=
+=?utf-8?B?YXNjaWku5pel5pys6KqeLuaXpeacrOiqni7ml6XmnKzoqp4=?=
+	=?utf-8?B?LuaXpeacrOiqni7ml6XmnKzoqp4u8J+MgC7wn4yALvCfjIAu8J+MgC5maWxlLm5hbWU=?=
 ```
