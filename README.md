@@ -32,5 +32,3 @@ $filename:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本語.
 =?utf-8?B?YXNjaWku5pel5pys6KqeLuaXpeacrOiqni7ml6XmnKzoqp4=?=
 	=?utf-8?B?LuaXpeacrOiqni7ml6XmnKzoqp4u8J+MgC7wn4yALvCfjIAu8J+MgC5maWxlLm5hbWU=?=
 ```
-
-[検証](https://dogmamix.com/MimeHeadersDecoder/)
