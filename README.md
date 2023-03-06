@@ -15,8 +15,11 @@ $disposition:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本�
 
 ```
 attachment;
-	filename*0=utf-8'ja'ascii.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA;
-	filename*1=%9E.%ED%BC%80.%ED%BC%80.%ED%BC%80.%ED%BC%80.file.name
+	filename*4=asci;
+	filename*3=i.%E6%97%A5%E6%9C%AC%E8%AA%9E.;
+	filename*2=%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E;
+	filename*1=.%E6%97%A5%E6%9C%AC%E8%AA%9E.%E6%97%A5%E6%9C%AC%E8%AA%9E;
+	filename*0=utf-8'ja'.%ED%BC%80.%ED%BC%80.%ED%BC%80.%ED%BC%80.file.name
 ```
 
 ```4d
