@@ -29,4 +29,4 @@ $filename:=$RFC.encode("ascii.日本語.日本語.日本語.日本語.日本語.
 	=?utf-8?B?LuaXpeacrOiqni7ml6XmnKzoqp4u8J+MgC7wn4yALvCfjIAu8J+MgC5maWxlLm5hbWU=?=
 ```
 
-コードポイント単位でwrapしますので，サローゲートペアは分断されるかもしれません。
+コードポイント単位でwrapしますので，サロゲートペアは分断されるかもしれません。
